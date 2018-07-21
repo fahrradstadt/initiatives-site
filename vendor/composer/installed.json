@@ -54,6 +54,88 @@
         ]
     },
     {
+        "name": "aws/aws-sdk-php",
+        "version": "3.63.5",
+        "version_normalized": "3.63.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/aws/aws-sdk-php.git",
+            "reference": "e12a6fb9045720fd96bd75e801b23e2877aa1245"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e12a6fb9045720fd96bd75e801b23e2877aa1245",
+            "reference": "e12a6fb9045720fd96bd75e801b23e2877aa1245",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "ext-pcre": "*",
+            "ext-simplexml": "*",
+            "ext-spl": "*",
+            "guzzlehttp/guzzle": "^5.3.1|^6.2.1",
+            "guzzlehttp/promises": "~1.0",
+            "guzzlehttp/psr7": "^1.4.1",
+            "mtdowling/jmespath.php": "~2.2",
+            "php": ">=5.5"
+        },
+        "require-dev": {
+            "andrewsville/php-token-reflection": "^1.4",
+            "aws/aws-php-sns-message-validator": "~1.0",
+            "behat/behat": "~3.0",
+            "doctrine/cache": "~1.4",
+            "ext-dom": "*",
+            "ext-openssl": "*",
+            "nette/neon": "^2.3",
+            "phpunit/phpunit": "^4.8.35|^5.4.3",
+            "psr/cache": "^1.0"
+        },
+        "suggest": {
+            "aws/aws-php-sns-message-validator": "To validate incoming SNS notifications",
+            "doctrine/cache": "To use the DoctrineCacheAdapter",
+            "ext-curl": "To send requests using cURL",
+            "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages"
+        },
+        "time": "2018-07-20T21:01:32+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Aws\\": "src/"
+            },
+            "files": [
+                "src/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Amazon Web Services",
+                "homepage": "http://aws.amazon.com"
+            }
+        ],
+        "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
+        "homepage": "http://aws.amazon.com/sdkforphp",
+        "keywords": [
+            "amazon",
+            "aws",
+            "cloud",
+            "dynamodb",
+            "ec2",
+            "glacier",
+            "s3",
+            "sdk"
+        ]
+    },
+    {
         "name": "behat/mink",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -476,6 +558,71 @@
             "semver",
             "validation",
             "versioning"
+        ]
+    },
+    {
+        "name": "defuse/php-encryption",
+        "version": "v2.2.0",
+        "version_normalized": "2.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/defuse/php-encryption.git",
+            "reference": "0d4d27c368ca6798bc162469e43248c363c73495"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/defuse/php-encryption/zipball/0d4d27c368ca6798bc162469e43248c363c73495",
+            "reference": "0d4d27c368ca6798bc162469e43248c363c73495",
+            "shasum": ""
+        },
+        "require": {
+            "ext-openssl": "*",
+            "paragonie/random_compat": "~2.0",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "nikic/php-parser": "^2.0|^3.0|^4.0",
+            "phpunit/phpunit": "^4|^5"
+        },
+        "time": "2018-04-23T19:33:40+00:00",
+        "bin": [
+            "bin/generate-defuse-key"
+        ],
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Defuse\\Crypto\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Taylor Hornby",
+                "email": "taylor@defuse.ca",
+                "homepage": "https://defuse.ca/"
+            },
+            {
+                "name": "Scott Arciszewski",
+                "email": "info@paragonie.com",
+                "homepage": "https://paragonie.com"
+            }
+        ],
+        "description": "Secure PHP Encryption Library",
+        "keywords": [
+            "aes",
+            "authenticated encryption",
+            "cipher",
+            "crypto",
+            "cryptography",
+            "encrypt",
+            "encryption",
+            "openssl",
+            "security",
+            "symmetric key cryptography"
         ]
     },
     {
@@ -1193,6 +1340,84 @@
         ]
     },
     {
+        "name": "drupal/aws",
+        "version": "1.0.0-beta2",
+        "version_normalized": "1.0.0.0-beta2",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/aws",
+            "reference": "8.x-1.0-beta2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/aws-8.x-1.0-beta2.zip",
+            "reference": "8.x-1.0-beta2",
+            "shasum": "07d40185aa9bcd576a1f15652131202cf8a45198"
+        },
+        "require": {
+            "aws/aws-sdk-php": "3.*",
+            "defuse/php-encryption": "*",
+            "drupal/core": "~8.0",
+            "drupal/encrypt": "*",
+            "drupal/real_aes": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-beta2",
+                "datestamp": "1531342721",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "Mike Priscella",
+                "homepage": "https://drupal.org/u/mpriscella",
+                "role": "Maintainer"
+            },
+            {
+                "name": "mpriscella",
+                "homepage": "https://www.drupal.org/user/2354820"
+            },
+            {
+                "name": "recidive",
+                "homepage": "https://www.drupal.org/user/12564"
+            },
+            {
+                "name": "yas",
+                "homepage": "https://www.drupal.org/user/17536"
+            }
+        ],
+        "description": "Provides the ability to connect and authenticate with AWS services.",
+        "homepage": "https://drupal.org/project/aws",
+        "keywords": [
+            "amazon",
+            "amazon web services",
+            "aws",
+            "ec2",
+            "elastic compute cloud",
+            "route 53",
+            "s3",
+            "services",
+            "simple storage service",
+            "web"
+        ],
+        "support": {
+            "source": "http://cgit.drupalcode.org/aws"
+        }
+    },
+    {
         "name": "drupal/coder",
         "version": "8.2.12",
         "version_normalized": "8.2.12.0",
@@ -1224,6 +1449,72 @@
             "phpcs",
             "standards"
         ]
+    },
+    {
+        "name": "drupal/encrypt",
+        "version": "3.0.0-alpha3",
+        "version_normalized": "3.0.0.0-alpha3",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/encrypt",
+            "reference": "8.x-3.0-alpha3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/encrypt-8.x-3.0-alpha3.zip",
+            "reference": "8.x-3.0-alpha3",
+            "shasum": "427d1330d64eb2946bd2c375296f30b2e6465ded"
+        },
+        "require": {
+            "drupal/core": "~8.0",
+            "drupal/key": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-3.x": "3.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-3.0-alpha3",
+                "datestamp": "1499723642",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Alpha releases are not covered by Drupal security advisories."
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "greggles",
+                "homepage": "https://www.drupal.org/user/36762"
+            },
+            {
+                "name": "nerdstein",
+                "homepage": "https://www.drupal.org/user/1557710"
+            },
+            {
+                "name": "rlhawk",
+                "homepage": "https://www.drupal.org/user/352283"
+            },
+            {
+                "name": "theunraveler",
+                "homepage": "https://www.drupal.org/user/71548"
+            },
+            {
+                "name": "zzolo",
+                "homepage": "https://www.drupal.org/user/147331"
+            }
+        ],
+        "description": "Provides an API for two-way encryption.",
+        "homepage": "https://www.drupal.org/project/encrypt",
+        "support": {
+            "source": "http://cgit.drupalcode.org/encrypt"
+        }
     },
     {
         "name": "drupal/flysystem",
@@ -1287,6 +1578,135 @@
         "homepage": "https://www.drupal.org/project/flysystem",
         "support": {
             "source": "http://cgit.drupalcode.org/flysystem"
+        }
+    },
+    {
+        "name": "drupal/key",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/key",
+            "reference": "8.x-1.7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/key-8.x-1.7.zip",
+            "reference": "8.x-1.7",
+            "shasum": "2f6cf737604fdf6b59c10d6e3872e967ce12a6fd"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.7",
+                "datestamp": "1517255284",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            },
+            "drush": {
+                "services": {
+                    "drush.services.yml": "^9"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Cellar Door",
+                "homepage": "https://www.drupal.org/user/658076"
+            },
+            {
+                "name": "CrashTest_",
+                "homepage": "https://www.drupal.org/user/261457"
+            },
+            {
+                "name": "nerdstein",
+                "homepage": "https://www.drupal.org/user/1557710"
+            },
+            {
+                "name": "rlhawk",
+                "homepage": "https://www.drupal.org/user/352283"
+            }
+        ],
+        "description": "Provides the ability to manage site-wide keys",
+        "homepage": "http://drupal.org/project/key",
+        "keywords": [
+            "Drupal"
+        ],
+        "support": {
+            "source": "http://cgit.drupalcode.org/key",
+            "issues": "http://drupal.org/project/key"
+        }
+    },
+    {
+        "name": "drupal/real_aes",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/real_aes",
+            "reference": "8.x-2.1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/real_aes-8.x-2.1.zip",
+            "reference": "8.x-2.1",
+            "shasum": "1fd8a7cea1eda08d9e20dd56f3bb624b018b0de2"
+        },
+        "require": {
+            "defuse/php-encryption": "^2.0",
+            "drupal/core": "~8.0",
+            "drupal/encrypt": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.1",
+                "datestamp": "1526056384",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Heine",
+                "homepage": "https://www.drupal.org/user/17943"
+            },
+            {
+                "name": "nerdstein",
+                "homepage": "https://www.drupal.org/user/1557710"
+            },
+            {
+                "name": "rlhawk",
+                "homepage": "https://www.drupal.org/user/352283"
+            }
+        ],
+        "description": "Provides an Authenticated AES encryption method for Encrypt though the Defuse PHP Encryption library.",
+        "homepage": "https://www.drupal.org/project/real_aes",
+        "support": {
+            "source": "http://cgit.drupalcode.org/real_aes"
         }
     },
     {
@@ -2079,6 +2499,63 @@
         ],
         "description": "Virtual file system to mock the real file system in unit tests.",
         "homepage": "http://vfs.bovigo.org/"
+    },
+    {
+        "name": "mtdowling/jmespath.php",
+        "version": "2.4.0",
+        "version_normalized": "2.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jmespath/jmespath.php.git",
+            "reference": "adcc9531682cf87dfda21e1fd5d0e7a41d292fac"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jmespath/jmespath.php/zipball/adcc9531682cf87dfda21e1fd5d0e7a41d292fac",
+            "reference": "adcc9531682cf87dfda21e1fd5d0e7a41d292fac",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2016-12-03T22:08:25+00:00",
+        "bin": [
+            "bin/jp.php"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "JmesPath\\": "src/"
+            },
+            "files": [
+                "src/JmesPath.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "Declaratively specify how to extract elements from a JSON document",
+        "keywords": [
+            "json",
+            "jsonpath"
+        ]
     },
     {
         "name": "myclabs/deep-copy",
