@@ -811,32 +811,6 @@ $settings['entity_update_batch_size'] = 50;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 
 # }
-$databases['default']['default'] = array (
-  'database' => 'fahrrad',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['install_profile'] = 'config_installer';
-$config_directories['sync'] = 'sites/default/files/config_7Yv2tUIYHJzJ_VKjHua3ecNp9xWLOoxDVksjz1gfPPh_lUu8d6lezS5A_wmcQVeZyHKH4XFGzQ/sync';
-$config_directories['sync'] = 'sites/default/configuration';
-
-
-
-
-
-
-
-// Load settings.local.php if it exists.
-// Settings should ideally be set here with putenv(), and read with getenv().
-// Use settings.local.php to set values to those environmental variables.
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
-}
 
 // install_profile might be different.
 $settings['install_profile'] = 'config_installer';
@@ -875,3 +849,12 @@ $settings['flysystem'] = $schemes;
 */
 // CSS and JS aggregation need per dyno cache.
 $settings['cache']['bins']['data'] = 'cache.backend.php';
+
+// Load settings.local.php if it exists.
+// Settings should ideally be set here with putenv(), and read with getenv().
+// Use settings.local.php to set values to those environmental variables.
+/*
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+*/
