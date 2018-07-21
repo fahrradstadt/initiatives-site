@@ -831,7 +831,6 @@ $databases['default']['default'] = array(
 );
 
 // Set Flysystem S3 endpoint.
-/*
 $schemes = [
   's3' => [
     'driver' => 's3',
@@ -846,7 +845,7 @@ $schemes = [
   ],
 ];
 $settings['flysystem'] = $schemes;
-*/
+
 // CSS and JS aggregation need per dyno cache.
 $settings['cache']['bins']['data'] = 'cache.backend.php';
 
