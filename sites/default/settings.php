@@ -852,8 +852,7 @@ $settings['cache']['bins']['data'] = 'cache.backend.php';
 // Load settings.local.php if it exists.
 // Settings should ideally be set here with putenv(), and read with getenv().
 // Use settings.local.php to set values to those environmental variables.
-/*
+
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
-*/
