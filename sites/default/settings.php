@@ -849,6 +849,9 @@ $settings['flysystem'] = $schemes;
 // CSS and JS aggregation need per dyno cache.
 $settings['cache']['bins']['data'] = 'cache.backend.php';
 
+// SSL / HTTPS
+$_SERVER['HTTPS'] = 'on';
+
 // Load settings.local.php if it exists.
 // Settings should ideally be set here with putenv(), and read with getenv().
 // Use settings.local.php to set values to those environmental variables.
