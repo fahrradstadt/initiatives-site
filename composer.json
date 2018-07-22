@@ -9,7 +9,8 @@
         "drupal/flysystem": "^1.0",
         "drupal/aws": "^1.0@beta",
         "aws/aws-sdk-php": "^3.63",
-        "league/flysystem-aws-s3-v3": "^1.0"
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "drupal/smtp": "^1.0@beta"
     },
     "replace": {
         "drupal/core": "^8.5"
