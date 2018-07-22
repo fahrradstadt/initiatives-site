@@ -850,7 +850,7 @@ $settings['flysystem'] = $schemes;
 $settings['cache']['bins']['data'] = 'cache.backend.php';
 
 // SSL / HTTPS
-$_SERVER['HTTPS'] = 'on';
+# $_SERVER['HTTPS'] = 'on';
 
 // Load settings.local.php if it exists.
 // Settings should ideally be set here with putenv(), and read with getenv().
