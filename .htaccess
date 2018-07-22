@@ -7,4 +7,4 @@ RewriteRule ^ index.php [L]
 
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*)$ https://www.fahrrad-initiativen.de/$1 [R=301,L]
